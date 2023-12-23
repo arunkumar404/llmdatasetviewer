@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+.app {
+  height: 100vh;
+  background: linear-gradient(135deg, #4b797c 0%, #5883c0 100%);
+}
+.fileinputholder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+.visualiserContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.indexInput {
+  border: 2px solid #000000;
+  border-radius: 5px;
+  height: 30px;
+  width: 300px;
+  padding-inline: 1rem;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.sampleContainer {
+  display: grid;
+  width: 100%;
+  height: 80vh;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 11.42vh);
+  grid-gap: 15px;
+}
+.instruction {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.input {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.output {
+  grid-column: 1/2;
+  grid-row: 4/8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.propmt {
+  grid-column: 2/3;
+  grid-row: 2/8;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 15px;
+  padding-top: 3rem;
+}
+.itemConts {
+  padding-inline: 5rem;
+  background-color: #cecccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: radial-gradient(circle at center, #ebe9e9, #afadad);
+  line-height: 30px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+}
+
+.itemConts::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 15px;
+}
+
+.itemConts::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 15px;
+}
+
+.itemConts::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+  border: 2px solid #f0f0f0;
+  border-radius: 15px;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 50px;
+  right: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+   z-index: 10;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
